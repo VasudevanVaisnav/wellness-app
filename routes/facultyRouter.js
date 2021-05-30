@@ -11,9 +11,9 @@ const getAppointments = require("../handlers/getAppointments");
 const fixAppointment = require("../handlers/fixAppointment");
 
 
-router.get('/getprofile:facultyId',getProfile);
-router.get('/getappointments:facultyId',getAppointments);
-router.get('/getappointmentstatus:appId',getAppointmentStatus);
+router.post('/getprofile',getProfile);
+router.post('/getappointments',getAppointments);
+router.post('/getappointmentstatus',getAppointmentStatus);
 router.post('/login',login);//done
 router.post('/signup',signup);//done
 router.post('/fixappointment',fixAppointment);

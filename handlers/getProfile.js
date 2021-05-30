@@ -1,7 +1,7 @@
 const user = require("../models/User");
 
 function getProfile(req,res,next){
-    const facId = req.params.facultyId;
+    const facId = req.body.facultyId;
     user.findOne({"facultyId":facId},(err,doc)=>{
         if (!err && doc){
             return res.status(200).json({"error":false,"message":doc});

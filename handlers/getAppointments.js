@@ -2,7 +2,7 @@ const user = require("../models/User");
 const appointment = require("../models/Appointment");
 
 function getAppointments(req,res,next){
-    const facId = req.params.facultyId;
+    const facId = req.body.facultyId;
     user.findOne({"facultyId":facId},(err,doc)=>{
         if (!err && doc){
             appointment.find({"facultyId":facId},(errDoc,result)=>{
