@@ -10,6 +10,7 @@ const getAppointmentStatus = require("../handlers/getAppointmentStatus");
 const getAppointments = require("../handlers/getAppointments");
 const fixAppointment = require("../handlers/fixAppointment");
 
+console.log("came here router");
 router.get('/getprofile:facultyId',getProfile);
 router.get('/getappointments:facultyId',getAppointments);
 router.get('/getappointmentstatus:appId',getAppointmentStatus);

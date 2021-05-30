@@ -2,6 +2,7 @@ const bcrypt = require("bcryptjs");
 const user = require("../models/User");
 
 function signup(req, res, next) {
+    console.log("signup");
     const email = req.body.email;
     const password = req.body.password;
     const name = req.body.name;
