@@ -2,6 +2,7 @@ const user = require("../models/Appointment");
 
 function fixAppointment(req,res,next){
     const appId = req.body.appId;
+    console.log(req.body)
     user.findOne({"appointmentId":appId},(err,doc)=>{
         if (!err && doc){
             return res.status(200).json({"error":false,"status":doc.appointmentStatus});
