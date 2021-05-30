@@ -44,11 +44,10 @@ app.use((req,res,next)=>{
 
 //
 
-console.log("came here app.js");
 app.use('/faculty',facultyRouter);
 
 
-//
+
 
 app.use((req,res,next)=>{
     const error = new Error("Not a valid request");

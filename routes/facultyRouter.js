@@ -10,12 +10,12 @@ const getAppointmentStatus = require("../handlers/getAppointmentStatus");
 const getAppointments = require("../handlers/getAppointments");
 const fixAppointment = require("../handlers/fixAppointment");
 
-console.log("came here router");
+
 router.get('/getprofile:facultyId',getProfile);
 router.get('/getappointments:facultyId',getAppointments);
 router.get('/getappointmentstatus:appId',getAppointmentStatus);
 router.post('/login',login);//done
-router.get('/signup',signup);//done
-router.get('/fixappointment',fixAppointment);
+router.post('/signup',signup);//done
+router.post('/fixappointment',fixAppointment);
 
 module.exports = router;
