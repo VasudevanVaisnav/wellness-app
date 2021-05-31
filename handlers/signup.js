@@ -14,7 +14,7 @@ function signup(req, res, next) {
             bcrypt.hash(password,10,(hashError,hash)=>{
                 if (!hashError && hash){
                     const data = new user({
-                        username: name,
+                        username: email,
                         mobileNo: mobile,
                         password: hash,
                         name: name
